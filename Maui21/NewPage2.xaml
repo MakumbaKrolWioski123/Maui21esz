@@ -3,30 +3,62 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Maui21.NewPage2"
              Title="NewPage2">
-    <VerticalStackLayout>
+    <VerticalStackLayout Spacing="10">
         <Label 
             Text="Welcome to .NET MAUI!"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
         <Entry 
+            x:Name="ImieEntry"
             Placeholder="Imie" 
             VerticalOptions="Center" 
             HorizontalOptions="Center"
-            MaxLength="100"/>
+            MaxLength="100"
+            WidthRequest="200"/>
         <Entry 
+            x:Name="EmailEntry"
             Placeholder="Email" 
             VerticalOptions="Center" 
             HorizontalOptions="Center"
-            Keyboard="Email"/>
-        <Picker>
+            Keyboard="Email"
+            WidthRequest="200"/>
+        <Picker x:Name="PickerTemat" WidthRequest="200" Title="Temat" SelectedIndexChanged="OnPickerSelected">
+            <Picker.Items>
+                <x:String>Reklamacja</x:String>
+                <x:String>Pytanie</x:String>
+                <x:String>Podziękowanie</x:String>
+                <x:String>Inne</x:String>
+            </Picker.Items>
+        </Picker>
+        <Editor 
+            Placeholder="Wiadomość" 
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            AutoSize="TextChanges"
+            MaxLength="1000"
+            WidthRequest="200"/>
+        <Picker x:Name="PickerPriorytet" WidthRequest="200" Title="Priorytet">
             <Picker.Items>
                 <x:String>Niski</x:String>
                 <x:String>Średni</x:String>
                 <x:String>Wysoki</x:String>
             </Picker.Items>
         </Picker>
-        <CheckBox 
+        <HorizontalStackLayout VerticalOptions="Center" HorizontalOptions="Center">
+            <CheckBox 
+            x:Name="Kopia"
             VerticalOptions="Center" 
             HorizontalOptions="Center"/>
+            <Label 
+            Text="Wyślij mi kopię wiadomości na email" 
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"/>
+        </HorizontalStackLayout>
+        <Button 
+            Text="Wyślij" 
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            WidthRequest="100"
+            Clicked="OnButtonClicked"/>
     </VerticalStackLayout>
 </ContentPage>
