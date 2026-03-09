@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Maui21.NewPage1"
+             Title="NewPage1">
+    <VerticalStackLayout
+     WidthRequest="620"
+     HorizontalOptions="Center">
+        <Label 
+         Text="Welcome to MAUI 21.3"
+         VerticalOptions="Center" 
+         HorizontalOptions="Center" />
+        <Grid RowDefinitions="120,120,120" ColumnDefinitions="200,200,200" ColumnSpacing="10" RowSpacing="10">
+            <Label Text="Wpisz imię:" Grid.Row="0" Grid.Column="0" HorizontalOptions="Center" FontSize="Medium"/>
+            <Entry
+         x:Name="NameEntry"
+         Placeholder="Imie"
+         MaxLength="50"
+         Keyboard="Default"
+         Grid.Row="0"
+         Grid.Column="0"
+         HeightRequest="75"
+         VerticalOptions="End"/>
+            <Label Text="Wpisz Email:" Grid.Row="0" Grid.Column="1" HorizontalOptions="Center" FontSize="Medium"/>
+            <Entry
+         x:Name="EmailEntry"
+         Placeholder="Email"
+         Keyboard="Email"
+         Grid.Row="0"
+         Grid.Column="1"
+         HeightRequest="75"
+         VerticalOptions="End"/>
+            <Label Text="Wpisz Hasło:" Grid.Row="0" Grid.Column="2" HorizontalOptions="Center" FontSize="Medium"/>
+            <Entry
+         x:Name="PasswordEntry"
+         Placeholder="Password"
+         MaxLength="50"
+         IsPassword="True"
+         Grid.Row="0"
+         Grid.Column="2"
+         HeightRequest="75"
+         VerticalOptions="End"/>
+            <Label Text="Wybierz Datę:" Grid.Row="1" Grid.Column="0" HorizontalOptions="Center" FontSize="Medium"/>
+            <DatePicker
+         HorizontalOptions="Center"
+         x:Name="DataPicker"
+         MaximumDate="12/31/2006"
+         MinimumDate="01/01/1950"
+         Grid.Row="1"
+         Grid.Column="0"
+         VerticalOptions="End"/>
+            <Label Text="Wybierz Płeć:" Grid.Row="1" Grid.Column="1" HorizontalOptions="Center" FontSize="Medium"/>
+            <Picker x:Name="PlecPicker" Grid.Row="1" Grid.Column="1" HeightRequest="75" VerticalOptions="End">
+                <Picker.Items>
+                    <x:String>Kobieta</x:String>
+                    <x:String>Mężczyzna</x:String>
+                    <x:String>Inna</x:String>
+                </Picker.Items>
+            </Picker>
+            <CheckBox
+         Grid.Row="1"
+         Grid.Column="2"
+         HorizontalOptions="Center"
+         VerticalOptions="End"
+         x:Name="AcceptCheckBox"
+         IsChecked="False"
+         CheckedChanged="OnCheckboxCheckedChanged"/>
+            <Label Text="Akceptuje warunki uzytkowania"
+            Grid.Row="1" 
+            Grid.Column="2" 
+            VerticalOptions="Start" 
+            HorizontalOptions="Center" 
+            HorizontalTextAlignment="Center"
+            FontSize="Medium"/>
+            <Button Text="Zajerestruj"
+             IsVisible="False"
+             x:Name="ZajerestrujButton"
+             Clicked="ZajerestrujButton_Clicked"
+             Grid.Row="2" Grid.Column="1"
+             HeightRequest="50"/>
+        </Grid>
+    </VerticalStackLayout>
+</ContentPage>
