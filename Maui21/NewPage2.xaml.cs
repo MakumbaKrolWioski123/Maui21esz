@@ -41,3 +41,20 @@ public partial class NewPage2 : ContentPage
         }
 	}
 }
+
+/*Dokumentacja
+nazwa funkcji: OnPickerSelected
+opis: Funkcja obs³uguj¹ca zdarzenie zmiany wyboru w kontrolce PickerTemat.
+W zale¿noœci od wybranego tematu, ustawia dostêpnoœæ i zawartoœæ kontrolki PickerPriorytet.
+parametry:object sender, EventArgs e
+zwracany typ: void
+autor: Ja
+
+nazwa funkcji: OnButtonClicked
+opis: Funkcja obs³uguj¹ca zdarzenie klikniêcia przycisku.
+Pobiera dane z ró¿nych kontrolek, sprawdza ich poprawnoœæ i 
+wyœwietla alert z podsumowaniem wprowadzonych informacji.
+parametry: object sender, EventArgs e
+zwracany typ: void
+autor: Ja
+*/

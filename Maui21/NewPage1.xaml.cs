@@ -24,3 +24,18 @@ public partial class NewPage1 : ContentPage
         DisplayAlert("Gratulacje!", "Zosta³eœ zarejestrowany!", "OK");
     }
 }
+
+/*Dokumentacja
+nazwa funkcji: OnCheckboxCheckedChanged
+opis: Funkcja obs³uguj¹ca zdarzenie zmiany stanu kontrolki CheckBox o nazwie AcceptCheckBox.
+parametry: object sender, CheckedChangedEventArgs e
+zwracany typ: void
+autor: Ja
+
+nazwa funkcji: ZajerestrujButton_Clicked
+opis: Funkcja obs³uguj¹ca zdarzenie klikniêcia przycisku ZajerestrujButton.
+Wyœwietla alert z gratulacjami po klikniêciu przycisku.
+parametry: object sender, EventArgs e
+zwracany typ: void
+autor: Ja
+*/
