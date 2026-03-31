@@ -1,0 +1,5 @@
+1.Keyboard="Url" słuzy do tego aby wyswietlająca się klawiatura systemowa ulatwila użytkownikowi wpisanie linku url.
+2.ClearButtonVisibility="WhileEditing" wyswietla przycisk wyczyść ktory jest widoczny gdy użytkownik wpisze cos w pole entry.
+3.Zamiast return pojawi się przycisk go, słuzy on żeby przejść do linku podanego w entry.
+4.Nie bo limit znaków to 255.
+5.Pojawi się "https://example.com" bo to jest wpisane w Placeholder.
